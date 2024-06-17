@@ -1,0 +1,5 @@
+strict digraph  {
+1 [label="at_1(counter fetch)\nat_1(tablered fetch)\nat_2(counter fetch)\nat_2(tablered fetch)\nteleported_1(counter fetch)\nteleported_1(tablered fetch)\nteleported_2(counter fetch)\nteleported_2(tablered fetch)"];
+2 [label="at_1(counter fetch)\nat_1(tablered fetch)\nat_2(counter fetch)\nat_2(tablered fetch)\np_psi()\nteleported_1(counter fetch)\nteleported_1(tablered fetch)\nteleported_2(counter fetch)\nteleported_2(tablered fetch)"];
+1 -> 2  [label=move_counter_tablered_fetch];
+}

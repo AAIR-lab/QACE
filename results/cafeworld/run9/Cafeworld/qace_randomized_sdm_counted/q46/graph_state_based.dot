@@ -1,0 +1,7 @@
+strict digraph  {
+1 [label="at_1(counter fetch)\nat_2(counter fetch)\ningripper_1(canred gripper)\ningripper_2(canred gripper)\nteleported_1(counter fetch)\nteleported_1(tablered fetch)\nteleported_2(counter fetch)\nteleported_2(tablered fetch)"];
+2 [label="at_1(counter fetch)\nat_2(counter fetch)\nempty_1(gripper)\nempty_2(gripper)\norder_1(canred counter)\norder_2(canred counter)\np_psi()\nteleported_1(counter fetch)\nteleported_1(tablered fetch)\nteleported_2(tablered fetch)"];
+3 [label="at_1(counter fetch)\nat_2(counter fetch)\nempty_1(gripper)\nempty_2(gripper)\norder_1(canred counter)\norder_2(canred counter)\nteleported_1(counter fetch)\nteleported_1(tablered fetch)\nteleported_2(tablered fetch)"];
+1 -> 3  [label=put_gripper_counter_canred_fetch];
+3 -> 2  [label=put300_gripper_counter_canred_fetch];
+}

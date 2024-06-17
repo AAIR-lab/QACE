@@ -1,0 +1,4 @@
+strict digraph  {
+1 [label="empty_1(gripper)\nempty_2(gripper)\norder_1(canred counter)\norder_2(canred counter)\nteleported_1(tablered fetch)\nteleported_2(tablered fetch)"];
+2 [label=""];
+}

@@ -1,0 +1,5 @@
+digraph  {
+1 [label=I];
+2 [label=G];
+1 -> 2  [key=0, label="teleport_counter_fetch (1)"];
+}

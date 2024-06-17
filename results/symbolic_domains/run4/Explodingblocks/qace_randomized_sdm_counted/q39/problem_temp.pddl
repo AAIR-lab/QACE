@@ -1,0 +1,22 @@
+
+(define (problem explodingblocks) (:domain explodingblocks)
+  (:objects
+        a - block
+	b - block
+	robot - robot
+  )
+  (:init 
+	(clear_1 b)
+	(clear_2 b)
+	(handfull_1 robot)
+	(handfull_2 robot)
+	(holding_1 a)
+	(holding_2 a)
+	(on_1 b a)
+	(on_2 b a)
+	(ontable_1 b)
+	(ontable_2 b)
+  )
+  (:goal (and
+	(p_psi)))
+)

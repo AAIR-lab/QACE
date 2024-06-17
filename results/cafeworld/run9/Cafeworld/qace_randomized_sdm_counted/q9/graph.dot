@@ -1,0 +1,5 @@
+digraph  {
+1 [label=I];
+2 [label=G];
+1 -> 2  [key=0, label="grasp_gripper_tablered_canred_fetch (1)"];
+}

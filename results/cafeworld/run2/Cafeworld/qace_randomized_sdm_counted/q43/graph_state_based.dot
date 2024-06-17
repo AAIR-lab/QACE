@@ -1,0 +1,5 @@
+strict digraph  {
+1 [label="at_1(counter fetch)\nat_2(counter fetch)\nteleported_1(counter fetch)\nteleported_2(counter fetch)"];
+2 [label="at_1(counter fetch)\nat_2(counter fetch)\np_psi()\nteleported_1(counter fetch)\nteleported_2(counter fetch)"];
+1 -> 2  [label=put_gripper_counter_canred_fetch];
+}

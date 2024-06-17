@@ -1,0 +1,55 @@
+
+(define (domain cafeworld)
+(:requirements :typing :strips :probabilistic-effects :disjunctive-preconditions :conditional-effects :negative-preconditions :equality)
+(:types manipulator can location robot)
+(:predicates (empty ?v0 - manipulator) (ingripper ?v0 - can ?v1 - manipulator) (at ?v0 - location ?v1 - robot) (teleported ?v0 - location ?v1 - robot) (order ?v0 - can ?v1 - location))
+
+
+	(:action teleport
+		:parameters (?loc - location ?r - robot)
+		:precondition (and (not (= ?loc ?r)) 
+			(and (not (teleported ?loc ?r))))
+		:effect (probabilistic 1.000000 (and
+			(at ?loc ?r)
+			(teleported ?loc ?r)) 0.000000 (and
+			))
+	)
+
+
+	(:action move
+		:parameters (?from - location ?to - location ?r - robot)
+		:precondition (and (not (= ?from ?to)) (not (= ?from ?r)) (not (= ?to ?r)) 
+			(and (at ?from ?r)))
+		:effect (probabilistic 1.000000 (and
+			(not (at ?from ?r))
+			(at ?to ?r)) 0.000000 (and
+			))
+	)
+
+
+	(:action grasp
+		:parameters (?g - manipulator ?loc - location ?obj - can ?r - robot)
+		:precondition (and (not (= ?g ?loc)) (not (= ?g ?obj)) (not (= ?g ?r)) (not (= ?loc ?obj)) (not (= ?loc ?r)) (not (= ?obj ?r)) 
+			(and (empty ?g)
+			(at ?loc ?r)
+			(order ?obj ?loc)))
+		:effect (probabilistic 0.727273 (and
+			(not (empty ?g))
+			(not (order ?obj ?loc))
+			(ingripper ?obj ?g)) 0.272727 (and
+			))
+	)
+
+
+	(:action put
+		:parameters (?g - manipulator ?loc - location ?obj - can ?r - robot)
+		:precondition (and (not (= ?g ?loc)) (not (= ?g ?obj)) (not (= ?g ?r)) (not (= ?loc ?obj)) (not (= ?loc ?r)) (not (= ?obj ?r)) 
+			(and (at ?loc ?r)
+			(ingripper ?obj ?g)))
+		:effect (probabilistic 1.000000 (and
+			(not (ingripper ?obj ?g))
+			(empty ?g)
+			(order ?obj ?loc)) 0.000000 (and
+			))
+	)
+)

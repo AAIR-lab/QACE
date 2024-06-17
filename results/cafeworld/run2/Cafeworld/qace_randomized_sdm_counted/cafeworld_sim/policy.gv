@@ -1,0 +1,7 @@
+Digraph G {
+size = "500,500";
+0 [ label = " [ 0:(teleported counter fetch) 2:(teleported tablered fetch) 4:(at counter fetch) 6:(ingripper canred gripper) ] :: (put gripper counter canred fetch) :: 1" ]; 
+1 [ label = " [ 0:(teleported counter fetch) 2:(teleported tablered fetch) 4:(at counter fetch) 8:(empty gripper) 10:(order canred counter) ] :: STOP :: 1"  ];
+0->1 ;
+}
+# Cost: 1

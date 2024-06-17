@@ -1,0 +1,5 @@
+strict digraph  {
+1 [label="teleported_1(tablered fetch)\nteleported_2(tablered fetch)"];
+2 [label="p_psi()\nteleported_1(tablered fetch)\nteleported_2(tablered fetch)"];
+1 -> 2  [label=teleport_counter_fetch];
+}
